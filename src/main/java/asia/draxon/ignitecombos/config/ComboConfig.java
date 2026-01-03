@@ -67,7 +67,7 @@ public class ComboConfig {
             }
             case ARCADE -> {
                 soundEnabled = true;
-                musicEnabled = false;
+                musicEnabled = true;
                 screenShake = false;
                 uiScale = 1.0f;
                 glowIntensity = 0.7f;
@@ -79,6 +79,13 @@ public class ComboConfig {
                 uiScale = 1.2f;
                 glowIntensity = 1.0f;
             }
+            case PREDATOR -> {
+                soundEnabled = true;
+                musicEnabled = true;
+                screenShake = true;
+                uiScale = 1.3f;
+                glowIntensity = 1.0f;
+            }
         }
         save();
     }
@@ -86,6 +93,7 @@ public class ComboConfig {
     public enum ConfigPreset {
         MINIMAL,
         ARCADE,
-        COMPETITIVE
+        COMPETITIVE,
+        PREDATOR
     }
 }

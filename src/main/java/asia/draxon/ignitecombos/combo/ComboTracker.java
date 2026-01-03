@@ -1,5 +1,6 @@
 package asia.draxon.ignitecombos.combo;
 
+import asia.draxon.ignitecombos.IgniteCombos;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.player.PlayerEntity;
 
@@ -14,8 +15,6 @@ public class ComboTracker {
     private int combo = 0;
     private Entity lastTarget;
     private long lastCombatTime;
-
-    private static final long COMBAT_DURATION_MS = 7000;
 
     public void onHit(PlayerEntity player, Entity target) {
         long now = System.currentTimeMillis();
@@ -34,7 +33,7 @@ public class ComboTracker {
     }
 
     public void tick() {
-        if (combo > 0 && System.currentTimeMillis() - lastCombatTime > COMBAT_DURATION_MS) {
+        if (combo > 0 && System.currentTimeMillis() - lastCombatTime > IgniteCombos.getConfig().comboTimeout) {
             reset();
         }
     }
