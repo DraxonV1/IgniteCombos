@@ -64,6 +64,7 @@ public class ComboConfig {
                 screenShake = false;
                 uiScale = 0.8f;
                 glowIntensity = 0.3f;
+                comboTimeout = 1000;
             }
             case ARCADE -> {
                 soundEnabled = true;
@@ -71,6 +72,7 @@ public class ComboConfig {
                 screenShake = false;
                 uiScale = 1.0f;
                 glowIntensity = 0.7f;
+                comboTimeout = 700;
             }
             case COMPETITIVE -> {
                 soundEnabled = true;
@@ -78,6 +80,7 @@ public class ComboConfig {
                 screenShake = true;
                 uiScale = 1.2f;
                 glowIntensity = 1.0f;
+                comboTimeout = 500;
             }
             case PREDATOR -> {
                 soundEnabled = true;
@@ -85,6 +88,7 @@ public class ComboConfig {
                 screenShake = true;
                 uiScale = 1.3f;
                 glowIntensity = 1.0f;
+                comboTimeout = 400;
             }
         }
         save();

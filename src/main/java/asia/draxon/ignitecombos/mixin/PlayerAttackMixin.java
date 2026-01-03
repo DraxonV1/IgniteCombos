@@ -20,7 +20,7 @@ public class PlayerAttackMixin {
         if (!player.getWorld().isClient()) return;
         if (!player.isMainPlayer()) return;
 
-        if (target instanceof PlayerEntity && target != player) {
+        if (target.isAttackable() && target.isAlive()) {
             ComboTracker.getInstance().onHit(player, target);
 
             boolean isPredator = IgniteCombos.getConfig().preset == ComboConfig.ConfigPreset.PREDATOR;

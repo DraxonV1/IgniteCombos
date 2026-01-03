@@ -1,5 +1,6 @@
 package asia.draxon.ignitecombos.mixin;
 
+import asia.draxon.ignitecombos.render.ComboRenderer;
 import asia.draxon.ignitecombos.render.WorldComboRenderer;
 import net.minecraft.client.gui.DrawContext;
 import net.minecraft.client.gui.hud.InGameHud;
@@ -12,6 +13,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 @Mixin(InGameHud.class)
 public class HudRenderMixin {
 
+    private final ComboRenderer comboRenderer = new ComboRenderer();
+
     @Inject(method = "render", at = @At("RETURN"))
     private void ignitecombos$render(
             DrawContext context,
@@ -19,5 +22,6 @@ public class HudRenderMixin {
             CallbackInfo ci
     ) {
         WorldComboRenderer.render(context);
+        comboRenderer.render(context);
     }
 }
