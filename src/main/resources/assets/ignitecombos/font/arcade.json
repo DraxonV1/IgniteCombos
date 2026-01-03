@@ -1,0 +1,11 @@
+{
+  "providers": [
+    {
+      "type": "bitmap",
+      "file": "ignitecombos:textures/font/arcade.png",
+      "ascent": 32,
+      "height": 48,
+      "chars": ["0123456789X"]
+    }
+  ]
+}

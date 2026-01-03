@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "ignitecombos",
+  "version": "${version}",
+  "name": "Ignite Combos",
+  "description": "Arcade-style PvP combo feedback for modern Minecraft combat. Track your combos, earn grades, and improve your skills with visual and audio feedback.",
+  "authors": [
+    "DraxonV1"
+  ],
+  "contact": {
+    "homepage": "https://ignitecombos.mc.draxon.asia",
+    "sources": "https://github.com/DraxonV1/IgniteCombos"
+  },
+  "license": "MIT",
+  "icon": "assets/ignitecombos/icon.png",
+  "environment": "client",
+
+  "entrypoints": {
+    "client": [
+      "asia.draxon.ignitecombos.IgniteCombos"
+    ],
+    "modmenu": [
+      "asia.draxon.ignitecombos.config.ModMenuIntegration"
+    ]
+  },
+
+  "mixins": [
+    "ignitecombos.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": ">=1.21.5",
+    "java": ">=21",
+    "fabric-api": "*"
+  },
+
+  "suggests": {
+    "modmenu": "*",
+    "cloth-config": "*"
+  }
+}

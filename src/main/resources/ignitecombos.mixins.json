@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "package": "asia.draxon.ignitecombos.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "PlayerAttackMixin",
+    "PlayerDamageMixin",
+    "HudRenderMixin",
+    "ClientTickMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}

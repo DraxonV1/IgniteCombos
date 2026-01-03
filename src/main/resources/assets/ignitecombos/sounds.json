@@ -1,0 +1,37 @@
+{
+  "hit": {
+    "sounds": [
+      {
+        "name": "ignitecombos:hit",
+        "volume": 0.8
+      }
+    ]
+  },
+
+  "grade_good": {
+    "sounds": [
+      {
+        "name": "ignitecombos:grade_good",
+        "volume": 1.0
+      }
+    ]
+  },
+
+  "combo_lost": {
+    "sounds": [
+      {
+        "name": "ignitecombos:combo_lost",
+        "volume": 1.0
+      }
+    ]
+  },
+
+  "hype_music": {
+    "sounds": [
+      {
+        "name": "ignitecombos:hype_music",
+        "stream": true
+      }
+    ]
+  }
+}
